@@ -1,0 +1,13 @@
+input {
+  display: flex;
+  margin-bottom: 20px;
+  width: 120px;
+  height: 30px;
+  border: 1px solid wheat;
+  border-radius: 5px;
+}
+
+button{
+    width: 120px;
+    
+}
