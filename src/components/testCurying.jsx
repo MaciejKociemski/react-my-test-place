@@ -22,6 +22,7 @@ const LoginForm = () => {
         Username:
         <input
           type="text"
+          placeholder="wpisz nazwę uzytkownika"
           value={username}
           onChange={handleInputChange(setUsername)}
         />
@@ -31,6 +32,7 @@ const LoginForm = () => {
         Password:
         <input
           type="password"
+          placeholder="wpisz hasło"
           value={password}
           onChange={handleInputChange(setPassword)}
         />

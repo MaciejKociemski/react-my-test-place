@@ -1,77 +1,23 @@
-import { useState } from "react";
+import { Component } from "react";
+import Counter from "./components/Counter";
+import LoginForm from "./components/testCurying";
+import UncontrolledForm from "./components/uncontrolledForm";
+import css from "../src/App.css";
+import TodoApp from "./components/ToDoApp";
 
-function App() {
-  const [formList, setFormList] = useState([]);
-  const [formData, setFormData] = useState({
-    formName: "",
-    formType: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const newForm = {
-      id: new Date().getTime(),
-      formName: formData.formName,
-      formType: formData.formType,
-    };
-
-    setFormList([...formList, newForm]);
-    setFormData({
-      formName: "",
-      formType: "",
-    });
-  };
-
-  return (
-    <div>
-      <h1>Formularze</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Nazwa formularza:
-          <input
-            type="text"
-            name="formName"
-            value={formData.formName}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <label>
-          Rodzaj formularza:
-          <input
-            type="text"
-            name="formType"
-            value={formData.formType}
-            onChange={handleChange}
-          />
-        </label>
-        <br />
-        <button type="submit">Dodaj formularz</button>
-      </form>
-
-      <h2>Lista formularzy:</h2>
-      {formList.length === 0 ? (
-        <p>Brak dodanych formularzy.</p>
-      ) : (
-        <ul>
-          {formList.map((form) => (
-            <li key={form.id}>
-              <strong>Nazwa:</strong> {form.formName}, <strong>Rodzaj:</strong>{" "}
-              {form.formType}
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+export default class App extends Component {
+  render() {
+    console.log(css.container);
+    console.log(css.paragraf);
+    return (
+      // <div className="container" >
+      <div className={css.container}>
+        <p className={css.paragraf}>Hello</p>
+        <LoginForm />
+        <UncontrolledForm />
+        <Counter />
+        <TodoApp />
+      </div>
+    );
+  }
 }
-
-export default App;

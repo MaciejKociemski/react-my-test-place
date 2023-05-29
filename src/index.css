@@ -67,3 +67,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+li {
+  list-style: none;
+  background-color: hsl(240, 100%, 27%, 20%);
+}

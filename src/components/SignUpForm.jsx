@@ -11,8 +11,8 @@ const INITIAL_STATE = {
   email: "",
   password: "",
   isActive: true,
-    gender: null,
-  age: 0
+  gender: null,
+  age: 0,
 };
 
 class SignUpForm extends Component {
@@ -101,7 +101,7 @@ class SignUpForm extends Component {
           <label htmlFor="gender_female">
             Female
             <input
-              value={Gender.FEMALE} 
+              value={Gender.FEMALE}
               checked={gender === Gender.FEMALE}
               id="gender_female"
               type="radio"
@@ -109,9 +109,9 @@ class SignUpForm extends Component {
               onChange={this.handleChange}
             />
           </label>
-            </section>
-            
-            {/* <label>
+        </section>
+
+        {/* <label>
                 Choose your age
                 <select name="age" value={age} onChange={this.handleChange}>
                     <option value="18-25">18-25</option>

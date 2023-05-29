@@ -11,7 +11,7 @@ class LoginForm extends Component {
 
     // eslint-disable-next-line react/prop-types
     this.props.onSubmit({ login, password });
-    form.reset()
+    form.reset();
   };
 
   render() {
